@@ -48,7 +48,7 @@
 
 /* FONT FACE */
 
-  @font-face {
+  /* @font-face {
     font-family: 'Open Sans';
     src: url('OpenSansLight-Italic.woff2') format('woff2'),
         url('OpenSansLight-Italic.woff') format('woff'),
@@ -82,12 +82,12 @@
         url('OpenSans-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
+  } */
 
 /* MAIN-BANNER */
 
   .background {
-  background-color: black;
+  background-color: blue;
   }
 
   .background img {
