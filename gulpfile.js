@@ -24,6 +24,8 @@ gulp.task('sass', function(){
   .pipe(gulp.dest('./build/css'))
 });
 
+//script task to minify, rename, and put in build folder
+
 gulp.task('lint', function(){
   return gulp.src(['./js/*.js'])
   .pipe(eslint())
@@ -38,24 +40,24 @@ gulp.task('script', function() {
    .pipe(gulp.dest('./build/js'))
 });
 
+//gulp watch tasks
 gulp.task('watch', function() {
- gulp.watch('./js/*.js', gulp.parallel('script'));
+ gulp.watch('scss/*.scss', gulp.series(sass));
+ gulp.watch('./js/*.js', gulp.series('script'));
 });
 
+//gulp browser sync task
 gulp.task('browser-sync', function() {
  browserSync.init( {
    server: {
      baseDir: "./"
    }
- })
+ });
+
+  gulp.watch(['build/css/*.css','/build/js/*.js']).on('change', browserSync.reload)
+
 })
 
-gulp.task('css', function(){
-  return gulp.src('style.css')
-});
-
+//default function that can reference multiple named tasks
 gulp.watch("./build/js/*.js").on('change', browserSync.reload);
-
-gulp.watch("style.css").on('change', browserSync.reload);
-
 gulp.task('default', gulp.parallel('watch', 'browser-sync')); //runs script in parallel
