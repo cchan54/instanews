@@ -42,7 +42,7 @@ gulp.task('script', function() {
 
 //gulp watch tasks
 gulp.task('watch', function() {
- gulp.watch('scss/*.scss', gulp.series(sass));
+ gulp.watch('./scss/*.scss', gulp.series('sass'));
  gulp.watch('./js/*.js', gulp.series('script'));
 });
 
@@ -54,10 +54,8 @@ gulp.task('browser-sync', function() {
    }
  });
 
-  gulp.watch(['build/css/*.css','/build/js/*.js']).on('change', browserSync.reload)
-
+  gulp.watch(['*.html', './build/css/*.css','./build/js/*.min.js']).on('change', browserSync.reload)
 })
 
 //default function that can reference multiple named tasks
-gulp.watch("./build/js/*.js").on('change', browserSync.reload);
 gulp.task('default', gulp.parallel('watch', 'browser-sync')); //runs script in parallel
