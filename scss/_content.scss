@@ -5,14 +5,25 @@
   flex-flow: column nowrap;
 }
 
+
 .main-header {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+img {
+  height: auto;
+  display: flex;
   align-content: center;
   justify-content: center;
-  text-align: center;
 }
 
 .main-text {
-  display: flex;
+  display: block;
+  text-align: center;
   align-content: center;
   justify-content: center;
   padding-top: 20px;
@@ -28,7 +39,7 @@ body {
     background-color: black;
 
     img {
-      padding-top: 200px;
+      padding-top: 10rem;
     }
 }
 
@@ -38,6 +49,6 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 20px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 10px;
 }

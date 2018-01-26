@@ -44,29 +44,10 @@ table {
   border-spacing: 0; }
 
 /* FONT FACE */
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSansLight-Italic.woff2") format("woff2"), url("OpenSansLight-Italic.woff") format("woff"), url("OpenSansLight-Italic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-BoldItalic.woff2") format("woff2"), url("OpenSans-BoldItalic.woff") format("woff"), url("OpenSans-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-Light.woff2") format("woff2"), url("OpenSans-Light.woff") format("woff"), url("OpenSans-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("OpenSans-Bold.woff2") format("woff2"), url("OpenSans-Bold.woff") format("woff"), url("OpenSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .container {
   display: -webkit-box;
@@ -80,17 +61,31 @@ table {
           flex-flow: column nowrap; }
 
 .main-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  padding: 1rem; }
+
+img {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center; }
+          justify-content: center; }
 
 .main-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
@@ -111,7 +106,7 @@ table {
 body {
   background-color: black; }
   body img {
-    padding-top: 200px; }
+    padding-top: 10rem; }
 
 /* DROPDOWN MENU */
 .drop-down {
@@ -123,8 +118,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
-  font-size: 20px; }
+  padding: 10px;
+  font-size: 10px; }
 
 .footer {
   font-size: 1rem;
@@ -132,4 +127,5 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin: 2.5rem 2.5rem; }
+  margin: 2.5rem 2.5rem;
+  padding: 0 2rem; }
