@@ -1,17 +1,62 @@
-.container {
+#load {
   display: flex;
   width: 100%;
-  height: 100%;
-  flex-flow: column nowrap;
+  justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%
+    }
 }
 
+.stories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+
+    li {
+      max-width: 100%;
+      flex: 1 1 100%;
+      position: relative;
+
+      @include tablet {
+      max-width: 50%;
+      flex: 1 1 50%;	
+      }
+
+      @include desktop {
+      max-width: 25%;
+      flex: 1 1 25%;
+      }
+		}
+}
+
+.story-background {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+}
 
 .main-header {
-  justify-content: center;
+  width: 80%;
+  height: 60vh;
+  margin: 100px auto 40px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-  height: 100%;
-  padding: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      align-content: center;
+    }
+
+    @include desktop {
+      display: inline-flex;
+      justify-content: flex-start;
+      margin: 0 0;
+    }
 }
 
 img {
@@ -27,19 +72,46 @@ img {
   align-content: center;
   justify-content: center;
   padding-top: 20px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include tablet {
+		  justify-content: flex-start;
+      
+    }
+    @include desktop {
+      max-width: 50%;
+    }
 }
 
 .logo {
   display: flex;
   align-content: center;
   justify-content: center;
+
+  @include tablet {
+    flex: 0 1 20%;	
+    	
+		img {
+			width: 90%;
+			height: auto;
+			}
+		}
+
+	@include desktop {
+    width: 10%:
+		flex: 0 1 30%;
+		align-self: center;
+		}
 }
 
 body {
     background-color: black;
 
     img {
-      padding-top: 10rem;
+      padding-top: 1rem;
     }
 }
 
@@ -51,5 +123,14 @@ body {
   justify-content: center;
   padding: 10px;
   font-size: 10px;
-  width: 100%
+  width: 100%;
+
+  @include tablet {
+		align-self: center;
+		flex: 0 1 auto;
+		}
+	@include desktop {
+		align-self: center;
+    align-items: flex-start;
+  }
 }
