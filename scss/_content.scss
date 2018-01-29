@@ -97,15 +97,15 @@ img {
 		img {
 			width: 90%;
 			height: auto;
-			}
+      }
 		}
 
 	@include desktop {
-    width: 10%:
+    width: 10%;
 		flex: 0 1 30%;
 		align-self: center;
-		}
-}
+    }
+  }
 
 body {
     background-color: black;
