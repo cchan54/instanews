@@ -140,6 +140,10 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.main-header {
+  -webkit-transition: height 1.75s ease-in-out 1s, min-height 1.75s ease-in-out 1s, max-height 1.75s ease-in-out 1s, margin 1s ease-in-out 0.5s;
+  transition: height 1.75s ease-in-out 1s, min-height 1.75s ease-in-out 1s, max-height 1.75s ease-in-out 1s, margin 1s ease-in-out 0.5s; }
+
 .loading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,7 +223,8 @@ table {
     .gallery {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      background-size: cover; } }
   @media (min-width: 1000px) {
     .gallery {
       background-size: cover;
@@ -235,7 +240,7 @@ table {
 
 .main-header {
   width: 80%;
-  height: 60vh;
+  height: 60vw;
   -ms-flex-line-pack: center;
       align-content: center;
   display: -webkit-box;
@@ -250,15 +255,14 @@ table {
           align-items: center; }
   @media (min-width: 600px) {
     .main-header {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      -ms-flex-line-pack: center;
-          align-content: center; } }
+      width: 100%; } }
   @media (min-width: 1000px) {
     .main-header {
       display: -webkit-box;
