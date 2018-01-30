@@ -23,27 +23,28 @@ $(function() {
     })
     .done(function(data) {
       var stories = "";
-
-
       var results = data.results.filter(function(item){
-        return item.multimedia.length;
+        return item.multimedia.length >=5;
       }).slice(0, 12);
 
       console.log(results);
 
-      $.each(results, function(key, value) {
+        $.each(results, function(key, value) {
         var image = value.multimedia[4].url,
-            words = value.abstract,
+            headline = value.abstract,
             url = value.url;
-
-          stories += '<div class="article">';
-          stories += '<a href="' + url + '">' + words + '</a>';
-          stories += '<img class="article-img" src="' + image + '">';
+          
+          stories += '<li>';
+          // stories += '<a href="' + url + '">' + headline + '</a>';
+          stories += '<div class="article" style="background-image: url(' + image + ')">';
+          stories += '<div class="caption">'
+          stories += '<p>'+ headline +'</p>';
+          stories += '</div>'
           stories += '</div>';
+          stories += '</li>';
 
         $('.gallery').append(stories);
-
-      });
     });
   });
+});
 });
