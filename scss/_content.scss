@@ -13,11 +13,10 @@
 
 .article {
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
-  height: 100vw;
+  height: 500px;
   width: 100%;
-  position: center;
+  position: relative;
 
     .article img {
       width: 100%;
@@ -32,8 +31,11 @@
       background-size: cover;
       display: flex;
       height: 500px;
-      width: 33.33%;
+      width: 50%;
       flex-flow: wrap;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
     }
     @include desktop{
       background-size: cover;
@@ -41,6 +43,9 @@
       height: 500px;
       width: 25%;
       flex-flow: wrap;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
     }
 
     .caption {
@@ -57,13 +62,13 @@
   width: 100%;
   font-size: 1rem;
   line-height: 1.5rem;
-  position: absolute;
+  position: relative;
   padding-top: 2rem;
   background:black;
   flex-direction: column;
 
     @include tablet {
-      display: inline;
+      display: flex;;
     }
 
     @include desktop {
@@ -95,7 +100,7 @@
     }
 
     @include desktop {
-      display: inline-flex;
+      display: flex;
       justify-content: flex-start;
       margin: 0 0;
     }
@@ -113,12 +118,8 @@ li {
   padding-top: 20px;
 
     @include tablet {
-      text-align: left;
-    }
-
-    @include tablet {
-		  justify-content: flex-start;
-      
+      justify-content: flex-start;
+      text-align: left;      
     }
     @include desktop {
       max-width: 50%;
@@ -140,7 +141,7 @@ li {
 		}
 
 	@include desktop {
-    width: 10%;
+    width: 100%;
 		flex: 0 1 30%;
 		align-self: center;
     }
