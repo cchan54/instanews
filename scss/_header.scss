@@ -9,7 +9,7 @@
 
 img {
   max-height: 80%;
-  @include screenSize($tablet) {
+  @include tablet {
       height: auto;
   }
 }
