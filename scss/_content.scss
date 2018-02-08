@@ -60,7 +60,7 @@ img {
 .gallery {
   display: flex;
   width: 100%;
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Open Sans";
   line-height: 1.5rem;
   position: relative;
@@ -156,7 +156,7 @@ li {
 body {
   background-color: black;
   font-family: "Open Sans", 'Arial', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #c2c2c2;
   img {
     padding-top: 1rem;
