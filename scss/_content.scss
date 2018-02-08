@@ -65,8 +65,8 @@ img {
 .gallery {
   display: flex;
   width: 100%;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   position: relative;
   padding-top: 2rem;
   background:black;
@@ -95,7 +95,6 @@ img {
 // logo and drop down menu
 
 .main-header {
-  width: 80%;
   height: 60vw;
   align-content: center;
   display: flex;
@@ -140,6 +139,7 @@ li {
   display: flex;
   align-content: center;
   justify-content: center;
+  text-align: center;
 
   @include tablet {
     flex: 0 1 20%;	
@@ -159,7 +159,9 @@ li {
 
 body {
   background-color: black;
-
+  font-family: "Open Sans", 'Arial', sans-serif;
+  font-size: 16px;
+  color: #c2c2c2;
   img {
     padding-top: 1rem;
   }
