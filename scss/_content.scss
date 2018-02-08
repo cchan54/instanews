@@ -1,29 +1,31 @@
+// loading wheel
+
 .loading {
   display: flex;
   width: 100%;
   justify-content: center;
 
+
 img {
-  padding: 0;
+  padding: 100px;
   width: 200px;
   height: 200px;
   }
 }
 
+//main article area
+
 .article {
-  background-size: cover;
   display: flex;
   height: 500px;
   width: 100%;
-  position: relative;
+  font-family: "Open Sans";
 
     .article img {
-      width: 100%;
       height: 420px;
-      position: relative;
+      // position: relative;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50%;
+      background-size: 100%;
     }
 
     @include tablet{
@@ -48,6 +50,8 @@ img {
       background-repeat: no-repeat;
     }
 
+// article text
+
 .caption {
   align-self: flex-end;
   color: white;
@@ -55,6 +59,8 @@ img {
   background: rgba(0, 0, 0, 0.8);
   }
 }
+
+// article display area
 
 .gallery {
   display: flex;
@@ -69,6 +75,8 @@ img {
     @include tablet {
       display: flex;;
       background-size: cover;
+      flex-flow: wrap;
+      width: 100%;
     }
 
     @include desktop {
@@ -83,6 +91,8 @@ img {
       text-decoration: none;
     }
 }
+
+// logo and drop down menu
 
 .main-header {
   width: 80%;
@@ -162,8 +172,6 @@ body {
     }
 }
 
-/* DROPDOWN MENU */
-
 .drop-down {
   display: flex;
   align-content: center;
@@ -187,4 +195,5 @@ body {
   background-size: cover;        
   background-position: 50%;                      
   }
+
 }

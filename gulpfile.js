@@ -7,7 +7,16 @@ var gulp = require('gulp'),           //Always first in load order
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano');
   prettyError = require('gulp-prettyerror')
+  babel = require('gulp-babel');
 
+var input = 'js/*.js';
+var output = './js/transpiled';
+
+gulp.task('babel', function () {
+  return gulp.src(input)
+  .pipe(babel())
+  .pipe(gulp.dest(output));
+});
 
 gulp.task('sass', function(){
   return gulp.src('./scss/style.scss')
@@ -27,14 +36,14 @@ gulp.task('sass', function(){
 //script task to minify, rename, and put in build folder
 
 gulp.task('lint', function(){
-  return gulp.src(['./js/*.js'])
+  return gulp.src(['./js/transpiled/*.js'])
   .pipe(eslint())
   .pipe(eslint.format())
   .pipe(eslint.failAfterError())
 });  
 
 gulp.task('script', function() {
- return gulp.src('./js/*.js')
+ return gulp.src('./js/transpiled/*.js')
    .pipe(uglify())   //calls uglify to run
    .pipe(rename({extname: '.min.js'})) //renames extension to ".min.js"
    .pipe(gulp.dest('./build/js'))
@@ -43,7 +52,7 @@ gulp.task('script', function() {
 //gulp watch tasks
 gulp.task('watch', function() {
  gulp.watch('./scss/*.scss', gulp.series('sass'));
- gulp.watch('./js/*.js', gulp.series('script'));
+ gulp.watch('./js/*.js', gulp.series(['babel','script']));
 });
 
 //gulp browser sync task

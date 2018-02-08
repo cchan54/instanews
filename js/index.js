@@ -3,11 +3,12 @@ $(document).ready(function() {
   $("select").on("change", function(event) {
     event.preventDefault();
 
+    // loading wheel
   $('.loading').show();
 
-    //grabbing of stories
+    // NYT API
     var selector = $(this).val();
-    var url = "https://api.nytimes.com/svc/topstories/v2/";
+    var url = "https://api.nytimes.com/svc/topstories/v2/"; // nyt api
     url += selector + ".json";
     url +=
       "?" +
@@ -22,11 +23,12 @@ $(document).ready(function() {
       method: "GET",
       dataType: "json"
     })
+    
     .done(function(data) {
       
       var results = data.results.filter(function(el){
         return el.multimedia.length >0;
-      }).slice(0, 12);
+      }).slice(0, 12); // limits stories to 12
 
       console.log(results);
 
@@ -44,8 +46,8 @@ $(document).ready(function() {
 
 
 
-        $('.loading').hide();
-        $('.gallery').append(stories);
+        $('.loading').hide(); // hiding wheel when stories append
+        $('.gallery').append(stories); // append stories here
 
 
 
