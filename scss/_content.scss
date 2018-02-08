@@ -23,9 +23,10 @@ img {
 
     .article img {
       height: 420px;
-      // position: relative;
       background-repeat: no-repeat;
       background-size: 100%;
+      background-position-x: 50%;
+      background-position-y: 50%;
     }
 
     @include tablet{
@@ -34,9 +35,6 @@ img {
       height: 500px;
       width: 50%;
       flex-flow: wrap;
-      background-position-x: 50%;
-      background-position-y: 50%;
-      background-repeat: no-repeat;
     }
 
     @include desktop{
@@ -45,9 +43,6 @@ img {
       height: 500px;
       width: 25%;
       flex-flow: wrap;
-      background-position-x: 50%;
-      background-position-y: 50%;
-      background-repeat: no-repeat;
     }
 
 // article text
@@ -65,8 +60,9 @@ img {
 .gallery {
   display: flex;
   width: 100%;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  line-height: 1.5rem;
   position: relative;
   padding-top: 2rem;
   background:black;
