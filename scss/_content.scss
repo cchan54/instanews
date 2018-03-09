@@ -1,38 +1,27 @@
+.container {
+  width: 100%;
+}
+
 // loading wheel
 
 .loading {
   display: flex;
   width: 100%;
   justify-content: center;
-
-
-img {
-  padding: 100px;
-  width: 200px;
-  height: 200px;
-  }
 }
 
 //main article area
 
 .article {
   display: flex;
-  height: 500px;
+  height: 400px;
   width: 100%;
   font-family: "Open Sans";
-
-    .article img {
-      height: 420px;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position-x: 50%;
-      background-position-y: 50%;
-    }
+  background-size: cover;
 
     @include tablet{
       background-size: cover;
       display: flex;
-      height: 500px;
       width: 50%;
       flex-flow: wrap;
     }
@@ -40,7 +29,6 @@ img {
     @include desktop{
       background-size: cover;
       display: flex;
-      height: 500px;
       width: 25%;
       flex-flow: wrap;
     }
@@ -59,8 +47,8 @@ img {
 
 .gallery {
   display: flex;
-  width: 100%;
-  font-size: 16px;
+  width: 90%;
+  font-size: 1rem;
   font-family: "Open Sans";
   line-height: 1.5rem;
   position: relative;
@@ -158,9 +146,6 @@ body {
   font-family: "Open Sans", 'Arial', sans-serif;
   font-size: 1rem;
   color: #c2c2c2;
-  img {
-    padding-top: 1rem;
-  }
 
     @include tablet {
       display: inline;
@@ -187,11 +172,10 @@ body {
     align-items: flex-start;
   }
 
-.story-background{
+.story-background {
   height: 400px;
   width: 100%;
   background-size: cover;        
   background-position: 50%;                      
   }
-
 }

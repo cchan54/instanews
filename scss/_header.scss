@@ -1,15 +1,17 @@
 .main-header { 
-  
+  height: auto;
+  text-align: center;
+  position: relative;
   transition: 
-  height 1.45s ease-in-out 1s,
-  min-height 1.5s ease-in-out 1s,
-  max-height 1.5s ease-in-out 1s,
-  margin 1s ease-in-out 0.5s;
-}
+    height 1.45s ease-in-out 1s,
+    min-height 1.5s ease-in-out 1s,
+    max-height 1.5s ease-in-out 1s,
+    margin 1s ease-in-out 0.5s;
 
 img {
   max-height: 80%;
   @include tablet {
       height: auto;
+    }
   }
 }
