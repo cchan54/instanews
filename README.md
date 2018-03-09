@@ -13,3 +13,7 @@ Instanews is a news website using an API from the New York Times. It displays 12
  </ul
 
 <p>Instanews is the second project in the RED Academy curriculum and was composed for learning purposes. The main focus of this project was the use of Javascript, understanding of gulp, and the usage of AJAX and jQuery.</p>
+
+<h2>Authors</h2>
+
+<p>Cliff Chan</p>
